@@ -1,9 +1,9 @@
 # School Finder in Santiago, Chile
 
 ## Authors
-- Hugo Salas
-- Ana Sofia Muñoz
-- Antonia Sanhueza 
+- Hugo Salas - [hugosalasr7](https://github.com/hugosalasr7)
+- Ana Sofia Muñoz - [anasofiamvaladez](https://github.com/anasofiamvaladez)
+- Antonia Sanhueza - [asanhueza1](https://github.com/asanhueza1)
 
 ## Description
 
