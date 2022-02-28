@@ -1,4 +1,12 @@
 # School Finder in Santiago, Chile
+
+## Authors
+- Hugo Salas
+- Ana Sofia Muñoz
+- Antonia Sanhueza 
+
+## Description
+
 An application based on Django that helps parents find the closest schools available in Chile’s Metropolitan Region. This uses information from Chile's Ministry of Education and calculations made with Google Maps' API. The idea is that a parent can easily input the municipality where he/she lives and certain filters (public/private, urban/rural, religious orientation, elementary/middle/high school) and find the closest schools available. The output is a map with the locations and attributes of the schools close by. These attributes contain each school's name, most recent academic performance, school fees, religious affiliation and driving time from the input municipality. For more information on its functionality, please watch this video: [url](https://github.com/hugosalasr7/school_finder_CH/blob/main/Images%20%26%20Video/vid_sample_sfCH.mp4).
 
 <p align="center">
