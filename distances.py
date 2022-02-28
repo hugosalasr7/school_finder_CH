@@ -3,7 +3,7 @@
     Output:  Generates a CSV file called dist_school_comuna.csv, 
              this has info of the driving time and the euclidean 
              distance between each comuna and each school.
-	Authors: Ana Sofía Muñoz, Hugo Salas
+	Authors: Hugo Salas, Ana Sofía Muñoz
 	Date Last Modified: 3/2/2021
 '''''''''''''''''''''''''''
 APIKEY = 'AIzaSyDLtL6Gysy2ViK5sR5ww-i-AdIHmsbBlmo'
