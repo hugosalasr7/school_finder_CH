@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-2.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-2.3.0.min.css" rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-2.3.0.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-2.3.0.min.js"></script>
+
+    {{ script | safe }}
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>School Spotter</title>
+  </head>
+  <body>
+    <h2>Filter by characteristic of schools:</h2>
+    <div class= "tabcontent" id= 'filter_1'>
+        <form method='post'>
+            {% csrf_token %}
+            <div class='col-12'>
+                <label for="">Schools near municipality:</label>
+                <select id="comuna" name="comuna">
+                  <option value=""></option>
+                  <option value="ALHUÉ">ALHUÉ </option>
+                  <option value="BUIN">BUIN </option>
+                  <option value="CALERA DE TANGO">CALERA DE TANGO </option>
+                  <option value="CERRILLOS">CERRILLOS </option>
+                  <option value="CERRO NAVIA">CERRO NAVIA </option>
+                  <option value="COLINA">COLINA </option>
+                  <option value="CONCHALÍ">CONCHALÍ </option>
+                  <option value="CURACAVÍ">CURACAVÍ </option>
+                  <option value="EL BOSQUE">EL BOSQUE </option>
+                  <option value="EL MONTE">EL MONTE </option>
+                  <option value="ESTACIÓN CENTRAL">ESTACIÓN CENTRAL </option>
+                  <option value="HUECHURABA">HUECHURABA </option>
+                  <option value="INDEPENDENCIA">INDEPENDENCIA </option>
+                  <option value="ISLA DE MAIPO">ISLA DE MAIPO </option>
+                  <option value="LA CISTERNA">LA CISTERNA </option>
+                  <option value="LA FLORIDA">LA FLORIDA </option>
+                  <option value="LA GRANJA">LA GRANJA </option>
+                  <option value="LA PINTANA">LA PINTANA </option>
+                  <option value="LA REINA">LA REINA </option>
+                  <option value="LAMPA">LAMPA </option>
+                  <option value="LAS CONDES">LAS CONDES </option>
+                  <option value="LO BARNECHEA"> LO BARNECHEA </option>
+                  <option value="LO ESPEJO"> LO ESPEJO </option>
+                  <option value="LO PRADO"> LO PRADO </option>
+                  <option value="MACUL"> MACUL </option>
+                  <option value="MAIPÚ"> MAIPÚ </option>
+                  <option value="MARÍA PINTO"> MARÍA PINTO </option>
+                  <option value="MELIPILLA"> MELIPILLA </option>
+                  <option value="PADRE HURTADO"> PADRE HURTADO </option>
+                  <option value="PAINE"> PAINE </option>
+                  <option value="PEDRO AGUIRRE CERDA"> PEDRO AGUIRRE CERDA </option>
+                  <option value="PEÑAFLOR"> PEÑAFLOR </option>
+                  <option value="PEÑALOLÉN"> PEÑALOLÉN </option>
+                  <option value="PIRQUE"> PIRQUE </option>
+                  <option value="PROVIDENCIA"> PROVIDENCIA </option>
+                  <option value="PUDAHUEL"> PUDAHUEL </option>
+                  <option value="PUENTE ALTO"> PUENTE ALTO </option>
+                  <option value="QUILICURA"> QUILICURA </option>
+                  <option value="QUINTA NORMAL"> QUINTA NORMAL </option>
+                  <option value="RECOLETA"> RECOLETA </option>
+                  <option value="RENCA"> RENCA </option>
+                  <option value="SAN BERNARDO"> SAN BERNARDO </option>
+                  <option value="SAN JOAQUÍN"> SAN JOAQUÍN </option>
+                  <option value="SAN JOSÉ DE MAIPO"> SAN JOSÉ DE MAIPO </option>
+                  <option value="SAN MIGUEL"> SAN MIGUEL </option>
+                  <option value="SAN PEDRO"> SAN PEDRO </option>
+                  <option value="SAN RAMÓN"> SAN RAMÓN </option>
+                  <option value="SANTIAGO"> SANTIAGO </option>
+                  <option value="TALAGANTE"> TALAGANTE </option>
+                  <option value="TILTIL"> TILTIL </option>
+                  <option value="VITACURA"> VITACURA </option>
+                  <option value="ÑUÑOA"> ÑUÑOA </option> 
+                </select>   
+            </div>
+            <div class='col-12'>
+              <label for="">Educational level:</label>
+                <select id="niv_educ" name="niv_educ">
+                  <option value=""></option>
+                  <option value="Media">High School</option>
+                  <option value="Básica">Middle School</option>
+                  <option value="Parvularia">Pre-k/Kinder</option>
+                </select>
+            </div>  
+            <div class='col-12'>
+              <label for="">Dependancy:</label>
+                <select id="pubpriv" name="pubpriv">
+                  <option value=""></option>
+                  <option value="PÚBLICA">Public</option>
+                  <option value="PRIVADA">Private</option>
+                </select>
+            </div>          
+            <div class='col-12'>
+              <label for="">Rural or urban</label>
+                <select id="urbrur" name="urbrur">
+                  <option value=""></option>
+                  <option value="RURAL">Rural</option>
+                  <option value="URBANO">Urban</option>
+                </select>
+            </div>
+            <div class='col-12'>
+              <label for="">Religious Orientation</label>
+                <select id="ori_religiosa" name="ori_religiosa">
+                  <option value=""></option>
+                  <option value="CATÓLICA">Catholic</option>
+                  <option value="EVANGÉLICA">Evangelic</option>
+                  <option value="JUDÍA">Jewish</option>
+                  <option value="LAICA">Non religious</option>
+                  <option value="NO ESPECIFICADA">Not specified</option>
+                  <option value="SIN INFORMACIÓN">No information</option>
+                </select>
+              <button type="submit" class="btn btn-primary" action="{% url 'homepage' %}">Search</button>
+            </div>
+        </form>
+    </div>
+  </div>
+    {{ div | safe }}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
