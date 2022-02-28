@@ -5,7 +5,7 @@
     Output:  Generates a CSV file called schools.csv that includes all
              the relevant information for each school at the national level,
              and schools_data_SCL.csv for the Metropolitan Region.
-	Authors: Antonia Sanhueza
+	Authors: Antonia Sanhueza, Hugo Salas
 	Date Last Modified: 3/17/2021
 '''''''''''''''''''''''''''
 
